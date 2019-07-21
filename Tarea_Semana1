@@ -1,0 +1,62 @@
+
+#include <iostream>
+using namespace std;
+
+int main() {
+	int num, s, sum = 0, temp;
+	cout << "Ingrese Numero";
+	cin >> num;
+	temp = num;
+	while (num > 0) {
+		s = num % 10;
+		sum = sum * 10 + s;
+		num = num / 10;
+	}
+	num = temp;
+	if (num == sum)
+	{
+		cout << "es palindromo";
+	}
+	else {
+		cout << "No es palindromo\n";
+	}
+
+	//Ejercicio 2
+	long i, n, num2 = 0, d;
+	cout << "\nDigite el Numero Binario:";
+	cin >> n;
+
+
+	for (i = 0;n != 0;++i)
+	{
+		d = n % 10;
+		num2 = (d) * (pow(2, i)) + num2;
+		n = n / 10;
+	}
+	cout << "\nLa Conversion a decimal  es " << num2<<"\n";
+
+	//Ejercicio 3
+	cout << "\n";
+	int cuadrado =0;
+	int cubo = 0;
+	int cuad = 0;
+	int cuad2 = 0;
+	cout << "Entero\t" << "Cuadrado\t" << "Cubo\n";
+	for (int i = 0; i < 11; i++) 
+	{
+		cuad++;
+		cuad2++;
+		cout << i<<"\t" << cuadrado<<"\t\t" << cubo<<"\n";
+		if (cuadrado<1)
+		{
+			cuadrado++;
+			cubo++;
+		}
+		else {
+			cuadrado = cuad * cuad2;
+			cubo = cuadrado * cuad;
+		}
+	}
+
+	return 0;
+}
