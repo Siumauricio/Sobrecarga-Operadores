@@ -57,18 +57,18 @@ Racional& Racional::operator*(const Racional& n) {
 }
 Racional& Racional::operator/(const Racional& n) {
 	Racional m;
-	m.numerador = numerador / n.denominador;
-	m.denominador = denominador / n.denominador;
+	m.numerador = numerador * n.denominador ;
+	m.denominador = denominador * n.numerador;
 	for (int i = 1; i < 50; i++)
 	{
-		i++;
-		if (m.numerador % i == 0 && m.denominador % i == 0)
+		if (m.numerador%i==0 && m.denominador%i==0)
 		{
 			m.numerador /= i;
 			m.denominador /= i;
 			i = 1;
 		}
 	}
+
 	return m;
 }
 void Racional::print() {
