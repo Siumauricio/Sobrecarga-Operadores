@@ -8,10 +8,10 @@ class Racional {
 
 public:
 	Racional(int num = 0, int den = 0);
-	Racional& operator +(const Racional& n);
-	Racional& operator -(const Racional& n);
-	Racional& operator *(const Racional& n);
-	Racional& operator /(const Racional& n);
+	friend Racional operator +(const Racional& num , const Racional& den);
+	friend Racional operator -(const Racional& num, const Racional& den);
+	friend Racional operator *(const Racional& num, const Racional& den);
+	friend Racional operator /(const Racional& num, const Racional& den);
 	void reducir(int num,int den);
 	void print();
 private:
