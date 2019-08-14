@@ -72,13 +72,13 @@ Racional& Racional::operator/(const Racional& n) {
 	return m;
 }
 void Racional::print() {
+	float decimal = (float)numerador / (float)denominador;
 	if (denominador == 0 || numerador == 0)
 	{
 		cout << "Division entre 0 no se puede";
 	}
 	else {
 		cout << "Suma De Fracciones\n\t" << numerador << "\n\t" << denominador << endl;
-		cout << "Valor en Punto Flotante Redondeado: "<< numerador / denominador <<endl;
-
+		cout << "Valor en Punto Flotante : "<< decimal <<endl;
 	}
  }
