@@ -6,29 +6,31 @@ Racional::Racional(int num , int den) {
 	this->numerador = num;
 }
 
-Racional& Racional::operator+(const Racional& n) {
+ Racional operator+(const Racional& n,const Racional& ne) {
 	Racional Res;
-	Res.numerador = numerador * n.denominador + (n.numerador * denominador);
-	Res.denominador = denominador * n.denominador;
+	Res.numerador = ne.numerador * n.denominador + (n.numerador * ne.denominador);
+	Res.denominador = ne.denominador * n.denominador;
 	return Res;
 }
 
-Racional& Racional::operator-(const Racional& n) {
+ Racional operator-(const Racional& n, const Racional& ne) {
 	Racional m;
-	m.numerador = numerador * n.denominador - (n.numerador * denominador);
-	m.denominador = denominador * n.denominador;
+	m.numerador = ne.numerador * n.denominador - (n.numerador * ne.denominador);
+	m.denominador = ne.denominador * n.denominador;
 	return m;
 }
-Racional& Racional::operator*(const Racional& n) {
+
+ Racional operator*(const Racional& n, const Racional& ne) {
 	Racional m;
-	m.numerador = numerador * n.numerador;
-	m.denominador = denominador * n.denominador;
+	m.numerador = ne.numerador * n.numerador;
+	m.denominador = ne.denominador * n.denominador;
 	return m;
 }
-Racional& Racional::operator/(const Racional& n) {
+
+ Racional operator/(const Racional& n, const Racional& ne) {
 	Racional m;
-	m.numerador = numerador * n.denominador ;
-	m.denominador = denominador * n.numerador;
+	m.numerador = ne.numerador * n.denominador ;
+	m.denominador = ne.denominador * n.numerador;
 	return m;
 }
 void Racional::print() {
