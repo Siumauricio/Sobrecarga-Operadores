@@ -78,6 +78,7 @@ void Racional::print() {
 	}
 	else {
 		cout << "Suma De Fracciones\n\t" << numerador << "\n\t" << denominador << endl;
+		cout << "Valor en Punto Flotante Redondeado: "<< numerador / denominador <<endl;
 
 	}
  }
