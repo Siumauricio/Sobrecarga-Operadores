@@ -8,13 +8,11 @@ class Racional {
 
 public:
 	Racional(int num = 0, int den = 0);
-
-		//Racional res;
 	Racional& operator +(const Racional& n);
 	Racional& operator -(const Racional& n);
 	Racional& operator *(const Racional& n);
 	Racional& operator /(const Racional& n);
-
+	void reducir(int num,int den);
 	void print();
 private:
 	int numerador;
